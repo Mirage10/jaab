@@ -1,25 +1,42 @@
 
+use rand::Rng;
+use std::*;
 
-use inline_python::python;
 fn main() {
     println!("Hello, world!");
-    //let a  = (4,5,6);
-    python! {
-        print("ii")
-
-}
+   
+   
 
 
-let mut v = vec![3, 4, 5];
 
+let mut rng = rand::thread_rng();
 println!("init");
-for i in 0..100000000{
-   v.push(i%337);
+let mut v = vec![];
+let n:u32= 100000000;
+for _i in 0 ..n {
+   v.push( rng.gen_range(0..n));
+   
 };
-
+//let mut vec: Vec<i64> =(0..5000000000).map(|i|  i%337).collect();
 println!("endinit");
 println!("start");
 v.sort_unstable();
 println!("end");
+
+//let mut rng = rand::thread_rng();
+   
+   
+let mut buffer = String::new();
+    let a = io::stdin().read_line(&mut buffer);
+    let ee = a.unwrap();
+
+ println!("ee{}",ee);
+
+ //   match a{
+ //     Ok(pp)=>println!("ok{}",pp),
+      
+ //     Err(ss)=> println!("err{}",ss)
+ //   }
+    println!("{}", buffer);
 
 }
