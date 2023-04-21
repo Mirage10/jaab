@@ -11,6 +11,7 @@ fn main() {
 println!("init");
 let mut v = vec![];
 let n:u32= 1000000000;
+let aa:u32=3;
 for i in 0 ..n {
    v.push( i%337 );     //rng.gen_range(0..n)
    
@@ -23,6 +24,8 @@ do_sort(v.clone());
 do_sort(v);
 
 }
+
+
 
 fn do_sort( mut v :Vec<u32>) {
     println!("endinit");
