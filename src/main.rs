@@ -11,7 +11,7 @@ fn main() {
 println!("init");
 let mut v = vec![];
 let n:u32= 1000000000;
-let aa:u32=3;
+let _aa:u32=3;
 for i in 0 ..n {
    v.push( i%337 );     //rng.gen_range(0..n)
    
